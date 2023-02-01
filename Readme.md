@@ -160,3 +160,8 @@ Run the following command to trigger the deployment:
 ./mvnw clean package -DskipTests -Dquarkus.kubernetes.deploy=true
 ```
 
+Create the route to the instance (needs to match the name of the service)
+
+```
+oc create route edge camel-edge --service camel-edge
+```
