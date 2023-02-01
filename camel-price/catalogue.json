@@ -12,6 +12,10 @@
       "price": 20
     },
     {
+      "item": "Bottle",
+      "price": 6
+    },
+    {
       "item": "Airplane",
       "price": 3000000
     },
