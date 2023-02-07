@@ -26,9 +26,18 @@
     {
         "item": "Giraffe",
         "price": 499.99
+    },
+    {
+        "item": "Bottle",
+        "price": 1.25
+    },
+    {
+        "item": "Backpack",
+        "price": 49.99
+    },
+    {
+        "item": "Footwear",
+        "price": 64.99
     }
-
-
-    
   ]
   

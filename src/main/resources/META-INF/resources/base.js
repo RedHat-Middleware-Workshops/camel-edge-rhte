@@ -754,7 +754,7 @@ function onMessageArrived(msg){
 
         var number = document.createElement('a-text')
         // number.setAttribute('value', item)
-        number.setAttribute('value', "$"+process.price)
+        number.setAttribute('value', process.price)
         number.setAttribute('position', {x: 0.5, y: 0, z: 0})
         // number.setAttribute('align', 'center')
         number.setAttribute('color', "yellow")
@@ -782,7 +782,7 @@ function onMessageArrived(msg){
             msg.firstChild.setAttribute(
               'animation',
               {  property: 'opacity', 
-                 dur: '2000', 
+                 dur: '5000', 
                  delay: 0, 
                 from: 1,
                 to: 0,

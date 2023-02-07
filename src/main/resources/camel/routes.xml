@@ -242,7 +242,7 @@
         </setProperty>
 
         <setProperty name="job-price">
-            <simple>"price":"${body}"</simple>
+            <simple>"price":"$${body}"</simple>
         </setProperty>
     </route>
 
@@ -267,7 +267,7 @@
         <log message="sending monitor MQTT message: ${body}"/>
         <to uri="{{mqtt.uri.monitor}}"/>
 
-        <!-- if client is MQTT we send we respond back -->
+        <!-- if client is MQTT we respond back -->
         <when>
             <simple>${exchangeProperty.topic-response} != null</simple>
             <setHeader name="CamelPahoOverrideTopic">
