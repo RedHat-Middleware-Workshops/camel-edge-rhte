@@ -39,7 +39,18 @@ function initMqtt(){
     
     // connect the client
     clientMqtt.connect(brokerOptions);
-    
+
+    // Reconnect mechanism in case MQTT connection is lost
+    const interval = setInterval(function() {
+      if(!clientMqtt.isConnected()){
+          console.log("MQTT: attempting reconnect.");
+          //somehow this field is automatically created on first connect
+          //we need to remove it, otherwise it won't reconnect.
+          delete brokerOptions.mqttVersionExplicit
+          clientMqtt.connect(brokerOptions);
+      }
+      // method to be executed;
+    }, 1000);
 }
 
 // called when the MQTT client connects
